@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->
 <html>
+<!--<![endif]-->
 
 <head>
     {MobileAppHeaders}
@@ -13,41 +17,43 @@
     <link rel="apple-touch-icon" type="image/png" href="http://beta.rehanbutt.com/img/favicon.png" />
     <link rel="apple-touch-icon" type="image/png" href="http://beta.rehanbutt.com/img/favicon.png" sizes="76x76" />
     <link rel="apple-touch-icon" type="image/png" href="http://beta.rehanbutt.com/img/favicon.png" sizes="120x120" />
-    <link rel="apple-touch-icon" type="image/png" href="http://beta.rehanbutt.com/img/favicon.png" sizes="152x152" /> 
-
-    {block:Hidden}
-        <meta name="if:Sliding header" content="1">
-        <meta name="if:Show navigation" content="1">
-        <meta name="if:Endless scrolling" content="1">
-        <meta name="if:Syntax highlighting" content="0">
-        <meta name="select:Layout" content="regular" title="Regular">
-        <meta name="select:Layout" content="narrow" title="Narrow">
-        <meta name="select:Layout" content="grid" title="Grid">
-        <meta name="if:Related Posts" content="1">
-        <meta name="text:Disqus shortname" content="">
-        <meta name="text:Google analytics ID" content=""> 
-    {/block:Hidden}
+    <link rel="apple-touch-icon" type="image/png" href="http://beta.rehanbutt.com/img/favicon.png" sizes="152x152" /> {block:Hidden}
+    <meta name="if:Sliding header" content="1">
+    <meta name="if:Show navigation" content="1">
+    <meta name="if:Endless scrolling" content="1">
+    <meta name="if:Syntax highlighting" content="0">
+    <meta name="select:Layout" content="regular" title="Regular">
+    <meta name="select:Layout" content="narrow" title="Narrow">
+    <meta name="select:Layout" content="grid" title="Grid">
+    <meta name="if:Related Posts" content="1">
+    <meta name="text:Disqus shortname" content="">
+    <meta name="text:Google analytics ID" content=""> {/block:Hidden}
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="{Favicon}">
     <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
 
-    <link rel="stylesheet" href="http://static.tumblr.com/wkjmpnm/XTEo1dexy/main-min.css">
+    <link rel="stylesheet" href="http://static.tumblr.com/wkjmpnm/XTEo1dexy/main-min.css"><!--NORMALIZE CSS-->
     {block:IfSyntaxHighlighting}
-        <link rel="stylesheet" href="http://static.tumblr.com/ehm1tdz/2VWnye81h/tumblr-highlightjs.css"> 
-    {/block:IfSyntaxHighlighting}
+    <link rel="stylesheet" href="http://static.tumblr.com/ehm1tdz/2VWnye81h/tumblr-highlightjs.css"> {/block:IfSyntaxHighlighting}
     <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900' rel='stylesheet' type='text/css'>
 
-    <style>
+    <!-- HTML5 Shiv -->
+    <!--[if lt IE 9]>
+            <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
+        <![endif]-->
 
+    <style>
+        /* Colors */
+        
         body {
             background: {BackgroundColor};
             font-family:"Maven Pro";
         }
         
         .blog-title {
-            font-family: "Maven Pro", sans-serif;
+            font-family: "Maven Pro", HelveticaNeue, Arial, sans-serif;
             font-weight: {TitleFontWeight};
         }
         
@@ -183,6 +189,7 @@
         
         .nav {
             color: white;
+            /*margin: 10px;*/
             padding: 14px;
             font-weight: 700;
             height: inherit;
@@ -534,27 +541,27 @@
                         <div class="controls-wrapper">
                             <div class="control share-control">
                                 <nav class="pop">
-                                    <a href="#" class="share selector"></a>
+                                    <a href="#" class="share selector icon-export"></a>
                                     <div class="pop-menu share-menu south" id="share_{PostID}">
                                         <ul>
-                                            <li class="open-in-app"><a href="#" class="share-item open-in-app" data-post="{PostID}">{lang:Open in app}</a></li>
-                                            <li><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="share-item facebook" target="_blank">{lang:Facebook}</a></li>
-                                            <li><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="share-item twitter" target="_blank">{lang:Tweet}</a></li>
+                                            <li class="open-in-app"><a href="#" class="share-item open-in-app" data-post="{PostID}">Open in app</a></li>
+                                            <li><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="share-item facebook" target="_blank">Facebook</a></li>
+                                            <li><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="share-item twitter" target="_blank">Tweet</a></li>
                                             {block:Photo}
-                                            <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={PhotoURL-500}" class="share-item pinterest" target="_blank">{lang:Pinterest}</a></li>
-                                            {/block:Photo} {block:Video}{block:VideoThumbnail}
-                                            <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={VideoThumbnailURL}&amp;is_video=true" class="share-item pinterest" target="_blank">{lang:Pinterest}</a></li>
+                                                <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={PhotoURL-500}" class="share-item pinterest" target="_blank">Pinterest</a></li>
+                                            {/block:Photo}
+                                            {block:Video}{block:VideoThumbnail}
+                                                <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={VideoThumbnailURL}&amp;is_video=true" class="share-item pinterest" target="_blank">Pinterest</a></li>
                                             {/block:VideoThumbnail}{/block:Video}
-                                            <li><a href="https://reddit.com/submit?url={URLEncodedPermalink}" class="share-item reddit" target="_blank">{lang:Reddit}</a></li>
-                                            <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}" class="share-item mail">{lang:Mail}</a></li>
-                                            <li><a href="{EmbedUrl}" class="share-item permalink">{lang:Embed}</a></li>
-                                            <li><a href="{Permalink}" class="share-item permalink">{lang:Permalink} <i class="arrow"></i></a></li>
+                                            <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}" class="share-item mail">Mail</a></li>
+                                            <li><a href="{Permalink}/embed" class="share-item permalink">Embed</a></li>
+                                            <li><a href="{Permalink}" class="share-item permalink">{lang:Permalink} <i class="icon-arrow_carrot_right"></i></a></li>
                                         </ul>
                                     </div>
                                 </nav>
                             </div>
-                            <div class="control reblog-control">{ReblogButton size="24" color="black"}</div>
-                            <div class="control like-control">{LikeButton size="24" color="black"}</div>
+                            <div class="control reblog-control">{ReblogButton size="21" color="black"}</div>
+                            <div class="control like-control">{LikeButton size="20" color="black"}</div>
                         </div>
                     </section>
                     </footer>
@@ -595,7 +602,6 @@
         {/block:Pagination} {/block:IndexPage}
     </footer>
     </section>
-
     <script>
         var Optica = {};
         Optica.ENDLESS_SCROLLING = {
@@ -628,6 +634,7 @@
     <script>
         !window.jQuery && document.write(unescape('%3Cscript src="http://static.tumblr.com/vr9xgox/sBgmmjhyw/jquery-1.9.1.min.js"%3E%3C/script%3E'));
     </script>
+    <!--<script src="http://static.tumblr.com/t1owtkf/sfOnynt6a/main-min.js"></script>-->
 
     {block:IfGoogleAnalyticsID}
     <script>
