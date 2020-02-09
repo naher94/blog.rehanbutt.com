@@ -9,15 +9,20 @@
     {MobileAppHeaders}
     <meta charset="utf-8">
     <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
-    <meta name="description" content="A collection of projects showing the world of my many visual based skills, like digital illustrations, digital fabrication, photography, fashion design, product development and branding.">
-    <meta name="keywords" content="Design,UX,Web,Development,3D,2D,Art,Illustration,making,building,apps,portfolio,personal,site,photography,branding,product,fashion">
+
+    <!-- Change this section -->
+    <meta name="description" content="A collection of projects showing many of my visual based skills: UI/UX, branding, web development, illustrations, photography and fashion design.">
+    <meta name="keywords" content="Design,UX,UI,Web,Development,branding,Illustration,photography,3D,2D,Art,making,building,apps,portfolio,personal,site,product,fashion">
     <meta name="author" content="Rehan Butt">
-    <link rel="icon" type="image/png" href="http://beta.rehanbutt.com/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="http://beta.rehanbutt.com/img/favicon.png" />
-    <link rel="apple-touch-icon" type="image/png" href="http://beta.rehanbutt.com/img/favicon.png" />
-    <link rel="apple-touch-icon" type="image/png" href="http://beta.rehanbutt.com/img/favicon.png" sizes="76x76" />
-    <link rel="apple-touch-icon" type="image/png" href="http://beta.rehanbutt.com/img/favicon.png" sizes="120x120" />
-    <link rel="apple-touch-icon" type="image/png" href="http://beta.rehanbutt.com/img/favicon.png" sizes="152x152" /> {block:Hidden}
+    <link rel="icon" type="image/png" href="https://rehanbutt.com/img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="https://rehanbutt.com/img/favicon.png" />
+    <link rel="apple-touch-icon" type="image/png" href="https://rehanbutt.com/img/favicon.png" />
+    <link rel="apple-touch-icon" type="image/png" href="https://rehanbutt.com/img/favicon.png" sizes="76x76" />
+    <link rel="apple-touch-icon" type="image/png" href="https://rehanbutt.com/img/favicon.png" sizes="120x120" />
+    <link rel="apple-touch-icon" type="image/png" href="https://rehanbutt.com/img/favicon.png" sizes="152x152" /> {block:Hidden}
+    <!-- Change this section -->
+
+
     <meta name="if:Sliding header" content="1">
     <meta name="if:Show navigation" content="1">
     <meta name="if:Endless scrolling" content="1">
@@ -34,173 +39,228 @@
     <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
 
-    <link rel="stylesheet" href="http://static.tumblr.com/wkjmpnm/XTEo1dexy/main-min.css"><!--NORMALIZE CSS-->
+    <link rel="stylesheet" href="https://static.tumblr.com/wkjmpnm/XTEo1dexy/main-min.css"><!--NORMALIZE CSS-->
     {block:IfSyntaxHighlighting}
-    <link rel="stylesheet" href="http://static.tumblr.com/ehm1tdz/2VWnye81h/tumblr-highlightjs.css"> {/block:IfSyntaxHighlighting}
-    <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://static.tumblr.com/ehm1tdz/2VWnye81h/tumblr-highlightjs.css"> {/block:IfSyntaxHighlighting}
+
+    <!-- Change this section -->
+    <link rel="stylesheet" href="https://rehanbutt.com/css/foundation.css"/>
+
+    <link rel="stylesheet" href="https://rehanbutt.com/css/rehan.css"/>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "url": "https://www.rehanbutt.com",
+      "image": "https://www.rehanbutt.com/img/rehan.png",
+      "alumniOf": "Carnegie Mellon University",
+      "sameAs": [
+        "https://twitter.com/naher94",
+        "https://www.instagram.com/naher94/",
+        "https://www.linkedin.com/in/rehan-butt/",
+        "https://www.pinterest.com/naher94/",
+        "https://dribbble.com/rehanbutt",
+        "https://500px.com/naher94"
+      ]
+    }
+    </script>
+    <!-- Change this section -->
 
     <!-- HTML5 Shiv -->
     <!--[if lt IE 9]>
-            <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
+            <script src="https://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
         <![endif]-->
 
     <style>
         /* Colors */
-        
+
+        @import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,700,900&display=swap');
+
         body {
             background: {BackgroundColor};
-            font-family:"Maven Pro";
+            font-family:"lato";
         }
-        
+
         .blog-title {
-            font-family: "Maven Pro", HelveticaNeue, Arial, sans-serif;
+            font-family: "lato", HelveticaNeue, Arial, sans-serif;
             font-weight: {TitleFontWeight};
         }
-        
+
         .blog-title a,
         .description,
         .search-no-results {
             color: {TitleColor};
         }
-        
+
         .post-extra,
         .post-content h1,
         .post-content h2,
         .quote .post-content blockquote {
-            font-family: "Maven Pro";
+            font-family: "Lato";
         }
-        
+
         .post-wrapper {
             border-radius: 0px;
         }
-        
+
         a.meta-item.tag-link {
             border-style: solid;
             border-width: 1px;
             padding: 5px;
             border-color: #e8e8e8;
         }
-        
+
         .post-extra .tag-link::before {
             content: '';
         }
-        
+
         a {
             color: {AccentColor};
         }
-        
+
         #pagination a,
         .nav-wrapper .nav-item .label {
             color: {AccentColor};
         }
-        
+
         #pagination a.next:after {
             border-left-color: {AccentColor};
         }
-        
+
         #pagination a.previous:after {
             border-right-color: {AccentColor};
         }
-        
+
         .loader .loader-bar {
             background-color: {TitleColor};
         }
-        
+
         .header-image.cover {
             background-image: url({HeaderImage});
         }
-        
+
         .user-avatar {
             background-color: {BackgroundColor};
             border-color: {BackgroundColor};
         }
-        
+
         .avatar-style-square .user-avatar {
             -webkit-box-shadow: 0 0 0 4px {BackgroundColor};
             box-shadow: 0 0 0 4px {BackgroundColor};
         }
-        
+
         .no-header-image .logo-wrapper,
         .contain-header-image .logo-wrapper {
             color: {AccentColor};
         }
         /* Adjust logo for light accents on light backgrounds */
-        
+
         .light-on-light.no-header-image .logo-wrapper,
         .light-on-light.contain-header-image .logo-wrapper {
             color: #444;
         }
         /* Adjust logo for dark accents on dark backgrounds */
-        
+
         .dark-on-dark.no-header-image .logo-wrapper,
         .dark-on-dark.contain-header-image .logo-wrapper {
             color: #fff;
         }
-        
+
         .related-posts-wrapper > h2 {
             color: {TitleColor};
         }
-        
+
         .date-note-wrapper {
-            color: #a7a7a7;
+            color: #1f2937;
         }
-        
+
         ::selection {
             color: white;
             background: #12abc4;
             /* WebKit/Blink Browsers */
         }
-        
+
         ::-moz-selection {
             color: white;
             background: #12abc4;
             /* Gecko Browsers */
         }
-        
+
         body {
-            color: #666666;
+            color: #1f2937;
             line-height: 1.5;
             font-size: auto;
         }
-        
+
         a.meta-item.tag-link:hover {
             background-color: #f2f2f2;
         }
-        
+
         .logo-wrapper {
             position: relative;
             margin-bottom: 25px;
             border: 1px solid #12abc4;
             width: auto;
         }
-        
+
         .pop-menu ul li:not(.no-hover):hover {
             background: #f2f2f2;
             color: white;
         }
-        
+
         .post-controls .control {
-            color: #ACACAC;
+            color: #1f2937;
         }
-        
-        #header {
+
+        .caption p{
+          padding: 0;
+        }
+
+        figure{
+          margin: 0;
+        }
+
+        .date-note-wrapper{
+          text-align: left;
+        }
+
+        #footer{
+          background-color: white;
+        }
+
+        .logo-wrapper .search-wrapper .search-field-label::before {
+          top: 3px;
+          padding-left: 10px;
+        }
+
+        .logo-wrapper .search-wrapper .search-field {
+          width: 100%;
+          padding-left: 43px;
+        }
+
+        .logo-wrapper .search-wrapper {
+          margin-left: 0;
+        }
+
+
+        /* #header {
             padding-top: 0px;
         }
-        
+
         .nav {
             color: white;
-            /*margin: 10px;*/
             padding: 14px;
             font-weight: 700;
             height: inherit;
             text-decoration: none;
-        }
-        
-        .nav:hover {
+        } */
+
+        /* .nav:hover {
             color: white;
             background-color: #680032;
         }
-        
+
         .navbar {
             background-color: #77013a;
             color: white;
@@ -213,13 +273,13 @@
             overflow-y: hidden;
             -webkit-overflow-scrolling: touch;
             font-size: 16px;
-        }
+        } */
 
         #pagination a:active {
             transform: translateY(0px);
             -webkit-transform: translateY(0px);
         }
-        
+
         .navscroll {
             white-space: nowrap;
             overflow-x: auto;
@@ -227,11 +287,11 @@
             -webkit-overflow-scrolling: touch;
             -ms-overflow-style: -ms-autohiding-scrollbar;
         }
-        
+
         .navbar::-webkit-scrollbar {
             display: none;
         }
-        
+
         .navscroll::-webkit-scrollbar {
             display: none;
         }
@@ -250,7 +310,7 @@
         .photo .photo-wrapper{
             border-radius: 0px;
         }
-        
+
         {CustomCSS}
     </style>
 </head>
@@ -261,7 +321,7 @@
         <div class="app-nag-header clearfix">
             <div class="app-nag-icon">
                 <div class="app-nag-icon-ios">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
+                    <svg version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
                         <path fill="#36465D" d="M1024,771c0,139.2-113.8,253-253,253H253C113.8,1024,0,910.2,0,771V253C0,113.8,113.8,0,253,0h518 c139.2,0,253,113.8,253,253V771z" />
                         <path fill="none" stroke="#FFF100" stroke-width="4" stroke-miterlimit="10" d="M463.9,209.4" />
                         <path opacity="0.6" fill="#231F20" d="M628.1,681c8.2,0,17.1-1.2,25.8-3.3V530.3h111.6V401.8h-68.6V473H585.4v162.4 C586,676.3,609.1,681,628.1,681z M654.4,250.5h-68.6v94h68.6V250.5z M754.3,722.9c-12.7,7.1-28.9,12.4-44.3,14.5l11.4,33.8 c-20.5,27-71.4,45.5-118.1,46.3c-1.6,0-3.1,0-4.7,0c0,0,0,0,0,0c-32.5,0-59.5-5.7-81.9-15.3c26.2,40,72.7,72.6,150.5,72.6c0,0,0,0,0,0c1.6,0,3.1,0,4.7,0c46.6-0.8,97.6-19.4,118.1-46.3L754.3,722.9z" />
@@ -271,7 +331,7 @@
                     </svg>
                 </div>
                 <div class="app-nag-icon-android">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
+                    <svg version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
                         <path fill="none" stroke="#FFF100" stroke-width="4" stroke-miterlimit="10" d="M463.9,209.4"></path>
                         <path opacity="0.5" fill="#231F20" d="M628.1,681c8.2,0,17.1-1.2,25.8-3.3V530.3h111.6V401.8h-68.6V473H585.4v162.4 C586,676.3,609.1,681,628.1,681z M654.4,250.5h-68.6v94h68.6V250.5z M754.3,722.9c-12.7,7.1-28.9,12.4-44.3,14.5l11.4,33.8 c-20.5,27-71.4,45.5-118.1,46.3c-1.6,0-3.1,0-4.7,0c0,0,0,0,0,0c-32.5,0-59.5-5.7-81.9-15.3c26.2,40,72.7,72.6,150.5,72.6c0,0,0,0,0,0c1.6,0,3.1,0,4.7,0c46.6-0.8,97.6-19.4,118.1-46.3L754.3,722.9z"></path>
                         <path fill="none" stroke="#FFF100" stroke-width="4" stroke-miterlimit="10" d="M355,359.5"></path>
@@ -281,7 +341,7 @@
                 </div>
             </div>
             <div class="app-nag-ratings">
-                <svg width="181px" height="30px" viewBox="0 0 181 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg width="181px" height="30px" viewBox="0 0 181 30" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <path d="M15.8,25.2 L6.1,29.8 L7.5,19.2 L0.1,11.4 L10.6,9.5 L15.8,0 L20.9,9.5 L31.4,11.4 L24,19.2 L25.4,29.8 L15.8,25.2 Z" fill="#FFC00E"></path>
                         <path d="M52.8,25.2 L43.1,29.8 L44.5,19.2 L37.1,11.4 L47.6,9.5 L52.8,0 L57.9,9.5 L68.4,11.4 L61,19.2 L62.4,29.8 L52.8,25.2 Z" fill="#FFC00E"></path>
@@ -299,7 +359,7 @@
                 </div>
             </div>
             <div class="app-nag-close-button">
-                <svg width="15px" height="15px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg width="15px" height="15px" viewBox="0 0 30 30" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <path d="M12.510351,14.6860639 L0,27.1964147 L2.175713,29.3721278 L14.686064,16.8617771 L27.196415,29.3721278 L29.372128,27.1964147 L16.861777,14.6860639 L29.372128,2.1757132 L27.196415,0 L14.686064,12.5103507 L2.175713,0 L0,2.1757132 L12.510351,14.6860639 L12.510351,14.6860639 Z" fill="#D3D3D3"></path>
                     </g>
@@ -320,18 +380,57 @@
                 {block:HideAvatar}avatar-hidden{/block:HideAvatar}
                 {block:ShowAvatar}avatar-style-{AvatarShape}{/block:ShowAvatar}">
 
-            <div style="background-color:#12abc4; text-align:center; padding: 20px;">
-                <a href="beta.rehanbutt.com">
-                    <img src="http://beta.rehanbutt.com/img/rehanLogo.svg" style="height:80px;">
-                </a>
+                <nav class="nav-container">
+        <div class="site-nav row column large-12">
+
+          <div class="menu-container">
+
+            <div class="burger-container">
+              <input class="burger-btn" type="checkbox" id="burger-btn"/>
+              <label class="burger-icon" for="burger-btn">
+                <span class="nav-burger-icon"></span>
+              </label>
+              <ul class="menu-links">
+                <div class="nav-item-container"><a class="nav" href="https://rehanbutt.com/index.html">Portfolio</a></div>
+                <div class="nav-item-container"><a class="nav" href="https://rehanbutt.com/about">About</a></div>
+                <div class="nav-item-container"><a class="nav" href="https://blog.rehanbutt.com">Blog</a></div>
+                <div class="nav-item-container"><a class="nav" href="https://resources.rehanbutt.com">Resources</a></div>
+                <div class="nav-item-container"><a class="nav" target="_blank" href="https://society6.com/rehanbutt">Store</a></div>
+              </ul>
+
+              <div class="mobile-navbar">
+                <a class="nav" href="https://rehanbutt.com/index.html">Portfolio</a>
+                <a class="nav" href="https://rehanbutt.com/about">About</a>
+              </div>
             </div>
-            <div class="navbar navscroll">
-                <a class="nav" href="http://beta.rehanbutt.com/index.html">Portfolio</a>
-                <a class="nav" href="http://beta.rehanbutt.com/about">About</a>
-                <a class="nav" href="http://blog.rehanbutt.com">Blog</a>
-                <a class="nav" href="http://resources.rehanbutt.com">Resources</a>
-                <a class="nav" href="https://society6.com/rehanbutt">Store</a>
+
+            <div class="navbar">
+              <a class="nav" href="https://rehanbutt.com/index.html">Portfolio</a>
+              <a class="nav" href="https://rehanbutt.com/about">About</a>
+              <a class="nav" href="https://blog.rehanbutt.com">Blog</a>
+              <a class="nav" href="https://resources.rehanbutt.com">Resources</a>
+              <a class="nav" target="_blank" href="https://society6.com/rehanbutt">Store</a>
             </div>
+            <div class="logo">
+              <a href="/">
+                <img src="https://rehanbutt.com/img/rehanLogo.svg" alt="Rehan's Logo">
+              </a>
+            </div>
+
+            <!-- Is this used? -->
+            <div class="mobile-navbar-full">
+              <div class="nav-item-container"><a class="nav" href="/index.html">Portfolio</a></div>
+
+
+                    <div class="nav-item-container"><a class="nav" href="/about">About</a></div>
+
+              <div class="nav-item-container"><a class="nav" href="https://blog.rehanbutt.com">Blog</a></div>
+              <div class="nav-item-container"><a class="nav" href="https://resources.rehanbutt.com">Resources</a></div>
+              <div class="nav-item-container"><a class="nav" target="_blank" href="https://society6.com/rehanbutt">Store</a></div>
+            </div>
+          </div>
+        </div>
+      </nav>
         </div>
 
         <section id="posts" class="content clearfix {block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}{block:HideHeaderImage}no-image {/block:HideHeaderImage} {block:ShowAvatar}avatar-style-{AvatarShape}{/block:ShowAvatar} {block:HideAvatar}avatar-hidden{/block:HideAvatar} {block:IfShowNavigation}show-nav{/block:IfShowNavigation}">
@@ -347,7 +446,7 @@
                     </div>
                 </div>
 
-                {block:SubmissionsEnabled}  
+                {block:SubmissionsEnabled} 
                     <a href="/submit" ><div class="logo-wrapper">Submit</div></a> 
                 {/block:SubmissionsEnabled}
 
@@ -521,7 +620,7 @@
                                                                     <section id="notes" class="notes-wrapper clearfix">
                                                                         <div class="notes-wrapper-header">
                                                                             <span class="notes-wrapper-header-close">
-                                                                                <svg width="15px" height="15px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                                <svg width="15px" height="15px" viewBox="0 0 30 30" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
                                                                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                                                         <path d="M12.510351,14.6860639 L0,27.1964147 L2.175713,29.3721278 L14.686064,16.8617771 L27.196415,29.3721278 L29.372128,27.1964147 L16.861777,14.6860639 L29.372128,2.1757132 L27.196415,0 L14.686064,12.5103507 L2.175713,0 L0,2.1757132 L12.510351,14.6860639 L12.510351,14.6860639 Z" fill="#D3D3D3"></path>
                                                                                     </g>
@@ -545,7 +644,7 @@
                                     <div class="pop-menu share-menu south" id="share_{PostID}">
                                         <ul>
                                             <li class="open-in-app"><a href="#" class="share-item open-in-app" data-post="{PostID}">Open in app</a></li>
-                                            <li><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="share-item facebook" target="_blank">Facebook</a></li>
+                                            <li><a href="https://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="share-item facebook" target="_blank">Facebook</a></li>
                                             <li><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="share-item twitter" target="_blank">Tweet</a></li>
                                             {block:Photo}
                                                 <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={PhotoURL-500}" class="share-item pinterest" target="_blank">Pinterest</a></li>
@@ -574,12 +673,12 @@
                     var dsq = document.createElement('script');
                     dsq.type = 'text/javascript';
                     dsq.async = true;
-                    dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+                    dsq.src = 'https://{text:Disqus Shortname}.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
-            <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+            <a href="https://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
         </section>
         {/block:IfDisqusShortname} {/block:Date} {/block:PermalinkPage}
         </div>
@@ -632,9 +731,9 @@
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
-        !window.jQuery && document.write(unescape('%3Cscript src="http://static.tumblr.com/vr9xgox/sBgmmjhyw/jquery-1.9.1.min.js"%3E%3C/script%3E'));
+        !window.jQuery && document.write(unescape('%3Cscript src="https://static.tumblr.com/vr9xgox/sBgmmjhyw/jquery-1.9.1.min.js"%3E%3C/script%3E'));
     </script>
-    <!--<script src="http://static.tumblr.com/t1owtkf/sfOnynt6a/main-min.js"></script>-->
+    <!--<script src="https://static.tumblr.com/t1owtkf/sfOnynt6a/main-min.js"></script>-->
 
     {block:IfGoogleAnalyticsID}
     <script>
@@ -696,7 +795,7 @@
         });
     </script>
     {/block:RelatedPosts} {/block:IfRelatedPosts} {block:IfSyntaxHighlighting}
-    <script type="text/javascript" src="http://static.tumblr.com/ehm1tdz/Mhunye5t3/highlight.pack.js" /></script>
+    <script type="text/javascript" src="https://static.tumblr.com/ehm1tdz/Mhunye5t3/highlight.pack.js" /></script>
     <script type="text/javascript">
         (function ($) {
             $(document).ready(function () {
